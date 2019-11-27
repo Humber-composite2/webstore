@@ -1,0 +1,94 @@
+.header{
+  background-color: var(--semidark);
+  color: var(--light);
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: 1em  auto  1em;
+  grid-template-areas:  "drop logo cart"
+                        "srch srch srch"
+                        "menu menu menu";
+}
+
+.hamburger {
+  grid-area: drop;
+  /* justify-self: start; */
+  text-align: left;
+  font-size: 1.8em;
+}
+
+.search {
+  grid-area: srch;
+  /* background-color: var(--mid);
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  color: var(--light);
+  background-image: url('/img/search.svg');
+  background-repeat: no-repeat;
+  background-position: 0.5em -0.25em;
+  padding-left: 2em; */
+}
+
+.search::placeholder {
+  color: var(--semidark);
+}
+
+.mainmenu {
+  grid-area: menu;
+  text-align: center;
+}
+
+.mainmenu a {
+  display: block;
+  color: var(--light);
+  text-decoration: none;
+  line-height: 2.5;
+}
+.mainmenu a:hover {
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.viewcart {
+  grid-area: cart;
+  /* justify-self: end; */
+}
+
+
+/**** MEDIA QUERIES (MUST GO AT THE BOTTOM) ****/
+
+@media screen and (min-width: 900px) {
+  .product {
+    font-size: 1.5em;
+  }
+  .navbar {
+    grid-template-columns: 1em  auto 2em  2em;
+    grid-template-areas:  "logo menu srch cart";  
+  }
+  .hamburger {
+    display: none;
+  }
+  .mainmenu {
+    text-align: center;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .mainmenu a {
+    padding: 0 1em;
+  }
+}
+
+@media screen and (min-width: 1325px) {
+
+}
