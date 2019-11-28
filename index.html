@@ -1,58 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webstore</title>
-    <meta name="description" content="[A short description]">
+    <meta name="description" content="Sell New or Old Products">
     <meta name="author" content="Ivandi S">
-    <link rel="stylesheet" href="css/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
+    <!-- You may change this "Reset" to "Normalize" if preferred -->
+    <!-- <link rel="stylesheet" href="css/reset.css">  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
+    <script src="https://kit.fontawesome.com/91d2257466.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/index.css">
-  </head>
-  <body>
-    <!-- Note: From this point oneward, this document should be considered 100% customizable. The elements and structure below are simply an example template to get you started. Your products and application will have different criteria that will give you the opportunity to customize all aspects of this document to your needs. Use what you need, discard or modify anything that's not directly useful in reaching your end goal. -->
+</head>
 
-    <header class="header">
-      <!-- Site logo, replace with your own -->
-      <!-- <a href="index.html"><img src="img/logo.svg" alt="HTML Logo (replace this)"></a> -->
-
-      <button type="button" class="hamburger">
-        <span class="material-icons">menu</span>
-      </button>
-
-      <!-- Navigation menu and toggle button (example) -->
-      <nav aria-label="Primary" class="navbar">
-        <ul class="mainmenu">
-          <li><a href="#">Webpage</a>
-            <!-- <ul>
-              <li><a href="#">Subpage</a></li>
-              <li><a href="#">Subpage</a></li>
-              <li><a href="#">Subpage</a></li>
-            </ul> -->
-          </li>
-          <li><a href="#">Webpage</a></li>
-          <li><a href="#">Webpage</a></li>
-          <li><a href="#">Webpage</a></li>
-        </ul>
-      </nav>
-
-      <!-- Search the site -->
-      <form>
-        <input type="search" name="find" id="find" class="search" placeholder="Search apple.com/ca">
-        <button type="button"><span class="material-icons">search</span></button>
-      </form>
-
-      <!-- Additional functionality or links -->
+<body>
+  <div class="wrapper">
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
       <ul>
-        <li><button><span class="material-icons">favorite_border</span></button></li>
-        <li><button class="viewcart"><span class="material-icons">shopping_cart</span></button></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
-    </header>
+    </nav>
 
-    
-    <!-- [Remove all default comments in this document after reading] -->
-
-    <script src="js/index.js"></script>
-  </body>
+     <!-- TOP CONTAINER -->
+     <section class="top-container">
+       <header class="showcase">
+         <h1>Your Web Presence</h1>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, inventore! Illo amet unde officia laborum!</p>
+         <a href="#" class="btn">Read More</a>
+       </header>
+       <div class="top-box top-box-a">
+         <h4>Membership</h4>
+         <p class="price">$199/mth</p>
+         <a href="#" class="btn">Buy Now</a>
+       </div>
+       <div class="top-box top-box-b">
+          <h4>Pro Membership</h4>
+          <p class="price">$299/mth</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+     </section>
+     
+     <!-- BOXES SECTION -->
+     <section class="boxes">
+       <div class="box">
+          <i class="fas fa-chart-pie fa-4x"></i>
+          <h3>Analytics</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, dignissimos.</p>
+       </div>
+       <div class="box">
+          <i class="fas fa-globe fa-4x"></i>
+          <h3>Marketin</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, dignissimos.</p>
+       </div><div class="box">
+          <i class="fas fa-cog fa-4x"></i>
+          <h3>Develpment</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, dignissimos.</p>
+       </div>
+       <div class="box">
+          <i class="fas fa-users fa-4x"></i>
+          <h3>Support</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, dignissimos.</p>
+       </div>
+     </section>
+     <!-- INFO  -->
+     <section class="info">
+       <img src="/img/" alt="">
+       <div>
+         <h2>Your Business On The Web</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quisquam nesciunt modi inventore ex incidunt possimus quas corrupti at atque.</p>
+       </div>
+     </section>
+     <!-- PORTFOLIO -->
+     <section class="portfolio">
+       <img src="https://source.unsplash.com/random/200x200" alt="">
+       <img src="https://source.unsplash.com/random/201x200" alt="">
+       <img src="https://source.unsplash.com/random/202x200" alt="">
+       <img src="https://source.unsplash.com/random/203x200" alt="">
+       <img src="https://source.unsplash.com/random/204x200" alt="">
+       <img src="https://source.unsplash.com/random/205x200" alt="">
+       <img src="https://source.unsplash.com/random/206x200" alt="">
+       <img src="https://source.unsplash.com/random/207x200" alt="">
+     </section>
+     <!-- FOOTER -->
+     <footer>
+       <p>Webstore &copy 2019</p>
+     </footer>
+  </div>
+  
+</body>
 </html>
