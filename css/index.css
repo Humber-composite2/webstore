@@ -13,7 +13,7 @@ html{
 
 body{
   background: #ccc;
-  margin: 30px 50px;
+  /* margin: 30px 50px; */
   line-height: 1.4;
 }
 
@@ -56,6 +56,28 @@ body{
 .main-nav a:hover{
   background: var(--dark);
   color: var(--light);
+}
+
+.sort-by{
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product{
+  padding: 0.75rem;
+  text-align: left;
+  background-color: #ffffff;  
+  box-shadow:  1em 1em 1em  rgba(0,0,0,0.4);
+  border-radius: 0.5em;
+}
+
+.img-pro{
+  text-align: center;
+}
+
+.pro-footer{
+  text-align: center;
 }
 
 /* TOP CONTAINER */
@@ -150,7 +172,7 @@ body{
 }
 
 /* FOOTER */
-footer{
+.footer1{
   margin-top: 2rem;
   background: var(--dark);
   color: var(--light);
@@ -164,16 +186,39 @@ footer{
     grid-template-areas: "shca shca"
                           "toba tobb";
   }
+  .showcase h1{
+    font-size: 2.5rem;
+  }
+  
+  .main-nav ul{
+    grid-template-columns: 1fr;
+  }
+  
+  .info{
+    grid-template-columns: 1fr;
+  }
+
+  .sort-by{
+    grid-template-columns: repeat(2,1fr);
+  }
 }
 
-.showcase h1{
-  font-size: 2.5rem;
+
+
+.info .btn{
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 
-.main-nav ul{
-  grid-template-columns: 1fr;
-}
+@media (max-width: 500px){
+  .top-container{
+    grid-template-areas: "shca"
+                          "toba"
+                          "tobb";
+  }
 
-.info{
-  grid-template-columns: 1fr;
+  .sort-by{
+    grid-template-columns: 1fr;
+  }
 }

@@ -14,19 +14,36 @@
 </head>
 
 <body>
+  
   <div class="wrapper">
     <!-- NAVIGATION -->
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <header>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+       <!-- Search the site -->
+       <form>
+          <label>Search
+            <input type="search" name="find" id="find">
+          </label>
+          <button type="button"><span class="material-icons">search</span></button>
+        </form>
+  
+        <!-- Additional functionality or links -->
+        <!-- <ul>
+          <li><button><span class="material-icons">favorite_border</span></button></li>
+          <li><button><span class="material-icons">shopping_cart</span></button></li>
+        </ul> -->
+    </header>
+    
 
      <!-- TOP CONTAINER -->
-     <section class="top-container">
+     <!-- <section class="top-container">
        <header class="showcase">
          <h1>Your Web Presence</h1>
          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, inventore! Illo amet unde officia laborum!</p>
@@ -42,10 +59,10 @@
           <p class="price">$299/mth</p>
           <a href="#" class="btn">Buy Now</a>
         </div>
-     </section>
+     </section> -->
      
      <!-- BOXES SECTION -->
-     <section class="boxes">
+     <!-- <section class="boxes">
        <div class="box">
           <i class="fas fa-chart-pie fa-4x"></i>
           <h3>Analytics</h3>
@@ -65,31 +82,152 @@
           <h3>Support</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, dignissimos.</p>
        </div>
-     </section>
+     </section> -->
+
      <!-- INFO  -->
-     <section class="info">
+     <!-- <section class="info">
        <img src="/img/" alt="">
        <div>
          <h2>Your Business On The Web</h2>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quisquam nesciunt modi inventore ex incidunt possimus quas corrupti at atque.</p>
        </div>
-     </section>
+     </section> -->
+
      <!-- PORTFOLIO -->
-     <section class="portfolio">
-       <img src="https://source.unsplash.com/random/200x200" alt="">
-       <img src="https://source.unsplash.com/random/201x200" alt="">
-       <img src="https://source.unsplash.com/random/202x200" alt="">
-       <img src="https://source.unsplash.com/random/203x200" alt="">
-       <img src="https://source.unsplash.com/random/204x200" alt="">
-       <img src="https://source.unsplash.com/random/205x200" alt="">
-       <img src="https://source.unsplash.com/random/206x200" alt="">
-       <img src="https://source.unsplash.com/random/207x200" alt="">
-     </section>
-     <!-- FOOTER -->
-     <footer>
-       <p>Webstore &copy 2019</p>
-     </footer>
-  </div>
+     <!-- <section class="portfolio">
+        <img src="https://source.unsplash.com/random/200x200" alt="">
+        <img src="https://source.unsplash.com/random/201x200" alt="">
+        <img src="https://source.unsplash.com/random/202x200" alt="">
+        <img src="https://source.unsplash.com/random/203x200" alt="">
+        <img src="https://source.unsplash.com/random/204x200" alt="">
+        <img src="https://source.unsplash.com/random/205x200" alt="">
+        <img src="https://source.unsplash.com/random/206x200" alt="">
+        <img src="https://source.unsplash.com/random/207x200" alt="">
+      
+    </section> -->
+
+    <section >
+      <h1>Sale on [Category Name]</h1>        
+      <h2>Filters</h2>
+      <form class="sort-by"> 
+        <fieldset class="sort-by-price">
+          <label for="sort-by-price">Show</label>
+          <select name="sort-by-price" id="sortByPrice">
+            <option value="price-high">Price, highest to lowest</option>
+            <option value="price-low">Price, lowest to highest</option>
+            <option value="newest">Newest releases</option>
+          </select>
+        </fieldset>
+        <fieldset class="sort-by-colour">
+          <legend>Colour</legend>
+          <ul>
+            <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+            <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+            <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+            <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+            <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+          </ul>
+        </fieldset>
+        <fieldset class="sort-by-size">
+          <legend>Sizes</legend>
+          <ol>
+            <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
+            <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+            <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
+            <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+            <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+          </ol>
+        </fieldset>
+        <fieldset class="sort-by-rating">
+          <legend>Ratings (at least)</legend>
+          <ol>
+            <li>
+              <input type="radio" name="rating" value="4" id="aboveFour">
+              <label for="aboveFour">
+                <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="rating" value="3" id="aboveThree">
+              <label for="aboveThree">
+                <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="rating" value="2" id="aboveTwo">
+              <label for="aboveTwo">
+                <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="rating" value="1" id="aboveOne">
+              <label for="aboveOne">
+                <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+              </label>
+            </li>
+          </ol>
+        </fieldset>
+      </form>
+    </section>
+    <h2>Search Results <small id="numResults">(5 results)</small></h2>
+
+    <!-- Note: All 5 products are identical -->
+    <div id="products">
+      <!-- Product 1 -->
+      <!-- <article class="product">
+        <header class="img-pro">
+            <img src="https://source.unsplash.com/random/200x200" alt="">
+        </header>
+        
+        <form>
+            <h3>Product Name</h3>
+            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+            <ul>
+              <li><label id="colour">Red</label></li>
+              <li><label id="size">L</label></li>
+            </ul> -->
+            
+            
+          <!-- <fieldset>
+            <legend>Colours</legend>
+            <ul>
+              <li><label><input type="radio" name="colour" value="r"> <span>Red</span></label></li>
+              <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
+              <li><label><input type="radio" name="colour" value="b"> <span>Blue</span></label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Sizes</legend>
+            <ol>
+              <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
+              <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
+              <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
+            </ol>
+          </fieldset> -->
+
+          <!-- <footer class="pro-footer">
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+            <a href="#" class="btn">see more</a>
+          </footer> -->
+        <!-- </form>
+      </article> -->
+      <!-- <a href="#" id="test">test</a> -->
+    </div>
   
+   
+     
+
+     <!-- FOOTER -->
+     <!-- <footer class="footer1">
+       <p>Webstore &copy 2019</p>
+     </footer> -->
+  </div>
+<script src="js/index.js"></script>
 </body>
 </html>
