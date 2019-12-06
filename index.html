@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webstore</title>
-    <meta name="description" content="Sell New or Old Products">
+    <meta name="description" content="Sell Clothes">
     <meta name="author" content="Ivandi S">
     <!-- You may change this "Reset" to "Normalize" if preferred -->
     <!-- <link rel="stylesheet" href="css/reset.css">  -->
@@ -18,7 +18,7 @@
   <div class="wrapper">
     <!-- NAVIGATION -->
     <header>
-      <nav class="main-nav">
+      <nav class="header-nav">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -27,90 +27,7 @@
         </ul>
       </nav>
        <!-- Search the site -->
-       <h2>Filters</h2>
-       <form class="filters" id="filtersForm">
-          <label for="productName">Search
-            <input type="search" name="find" id="productName">
-          </label>
-          <!-- <button type="button"><span class="material-icons">search</span></button> -->
-          <fieldset class="brand-name">
-              <label for="brandName">Brand:
-                  <select name="brandName" id="brandName">
-                    <option value="all" selected>All Brands</option>
-                    <option value="adidas">Adidas</option>
-                    <option value="champion">Champion</option>
-                    <option value="fila">Fila</option>
-                    <option value="nike">Nike</option>
-                    <option value="puma">Puma</option>
-                  </select>
-                </label>
-          </fieldset>
-          <fieldset class="sort-by-rating">
-              <legend>Ratings (at least)</legend>
-              <ol>
-                  <li>
-                      <input type="radio" name="rating" value="all" checked>
-                      <label for="all">All
-                      </label>
-                    </li>
-                <li>
-                    <input type="radio" name="rating" value="5stars">
-                    <label for="five">5 Stars
-                    </label>
-                  </li>
-                <li>
-                  <input type="radio" name="rating" value="4stars">
-                  <label>
-                    <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
-                  </label>
-                </li>
-                <li>
-                  <input type="radio" name="rating" value="3stars">
-                  <label>
-                    <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                  </label>
-                </li>
-                <li>
-                  <input type="radio" name="rating" value="2stars">
-                  <label for="two">
-                    <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                  </label>
-                </li>
-                <li>
-                  <input type="radio" name="rating" value="1star">
-                  <label for="one">
-                    <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                  </label>
-                </li>
-                <li>
-                    <input type="radio" name="rating" value="nostar">
-                    <label for="zero">
-                      
-                    </label>
-                  </li>
-              </ol>
-            </fieldset>
-      <!-- <fieldset class="sort-by-colour">
-                <legend>Colour</legend>
-                <ul>
-                  <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-                  <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-                  <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-                  <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-                  <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
-                </ul>
-              </fieldset>
-              <fieldset class="sort-by-size">
-                <legend>Sizes</legend>
-                <ol>
-                  <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-                  <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-                  <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-                  <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-                  <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
-                </ol>
-              </fieldset> -->
-        </form>
+       
   
         <!-- Additional functionality or links -->
         <!-- <ul>
@@ -119,11 +36,108 @@
         </ul> -->
     </header>
 
-    <main>
-        <header>
-            <h1>Sale on [Category Name]</h1>  
-            <h2>Courses <small id="numResults">(5 results)</small></h2>
-            
+    <main class="main-section">
+        <section class="filters-by">
+          <h2>Filters</h2>
+          <form class="filters" id="filtersForm">
+            <label for="productName">Search
+              <input type="search" name="find" id="productName">
+            </label>
+            <!-- <button type="button"><span class="material-icons">search</span></button> -->
+            <fieldset class="brandName">
+              <label for="brandName">Brand:
+                <select name="brandName" id="brandName">
+                  <option value="all" selected>All Brands</option>
+                  <option value="adidas">Adidas</option>
+                  <option value="champion">Champion</option>
+                  <option value="fila">Fila</option>
+                  <option value="nike">Nike</option>
+                  <option value="puma">Puma</option>
+                </select>
+              </label>
+            </fieldset>
+            <fieldset class="rating">
+              <legend>Ratings (at least)</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="rating" value="all" checked>
+                  <label for="all">All
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="5stars">
+                  <label>
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="4stars">
+                  <label>
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="3stars">
+                  <label>
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="2stars">
+                  <label>
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star_border</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="1star">
+                  <label>
+                    <span class="material-icons">star</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="nostar">
+                  <label for="zero">
+                    <span class="material-icons">star_border</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <!-- <fieldset class="sort-by-colour">
+                        <legend>Colour</legend>
+                        <ul>
+                          <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+                          <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+                          <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+                          <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+                          <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+                        </ul>
+                      </fieldset>
+                      <fieldset class="sort-by-size">
+                        <legend>Sizes</legend>
+                        <ol>
+                          <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
+                          <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+                          <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
+                          <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+                          <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+                        </ol>
+                      </fieldset> -->
+          </form>
+        </section>
+        <section>
+          <header class="sort-by">
+            <h1>Sale on [Category Name]</h1>
             <fieldset class="sort-order">
               <label for="sortOrder">Sort by:
                 <select name="sort" id="sortOrder" class="sort">
@@ -136,9 +150,11 @@
                 </select>
               </label>
             </fieldset>
+        
+            <h2>Courses <small id="numResults">(5 results)</small></h2>
           </header>
-      
-        <section id="products" class="products"></section>
+          <section id="products" class="products"></section>
+        </section>
     </main>
   
    
