@@ -2,7 +2,7 @@
 let tes = document.getElementById(`test`);
 
 const settings = {
-  notifySeatsRemaining: 5,
+  notifyQuantitiesRemaining: 5,
   coursesPerPage: 3,
   imagePath: 'img/'
 }
@@ -247,27 +247,39 @@ const loadProductsByOrder = (arrToSort, criteria) => {
 const runTheFilter = theForm => {
 
   const brandToSearch = theForm.elements.brandName.value;
-  const nameToSearch = theForm.elements.courseName.value;
-  // const ratingToSearch = theForm.elements.rating.value;
+  const nameToSearch = theForm.elements.productName.value;
+  const ratingToSearch = theForm.elements.rating.value;
 
   console.log(theForm.elements)
 
   // Filter all courses in multiple
-  const filteredCourses = allCourses
+  const filteredProducts = allProducts
     .filter(c => c.name.toLowerCase().includes( nameToSearch.trim().toLowerCase() ))  // filter by name
     .filter(c => c.brand == brandToSearch || brandToSearch == "all")         // filter by category
-    // .filter(c => `${c.rating}` == ratingToSearch || ratingToSearch == "all");        // filter by semester
+    .filter(c => c.rating == ratingToSearch || ratingToSearch == "all");        // filter by semester
 
-  renderCoursesFromArray(filteredCourses);
+  renderProductsFromArray(filteredProducts);
 }
 
 
 
 // EVENT HANDLER FUNCTIONS **************
+// const loadRating = event => {
+//   const justFall2019 = allProducts.filter(c => c.rating == `Adidas`);
+//   renderCoursesFromArray(justFall2019);
+// }
+
+const handleClickOfProducts = event => {
+  // if (!event.target.matches('button.course-register')) {
+  //   return;
+  // }
+  // const courseid = parseInt(event.target.dataset.courseid);
+  // addItemToCart(courseid);
+}
 
 
 // When the filter form itself is submit...
-const filterTheCourses = event => {
+const filterTheProducts = event => {
   event.preventDefault(); // Prevent the submit form refreshing
   runTheFilter(event.target);
 }
@@ -279,7 +291,7 @@ const submitTheFilterForm = event => {
 }
 
 // When sorting, ensure the filters run first (which leads to a render)
-const sortTheCourses = event => {
+const sortTheProducts = event => {
   runTheFilter(document.getElementById('filtersForm'));
 }
 
@@ -297,7 +309,7 @@ const getProductAsHtmlString = (product) =>{
     callout = `<small class="callout">Sold out</small>`;
     soldout = `soldout`;
     register = ``;
-  } else if (product.available < settings.notifySeatsRemaining) {
+  } else if (product.available < settings.notifyQuantitiesRemaining) {
     callout = `<small class="callout urgent">Limited seats remaining</small>`;
   }
   
@@ -313,7 +325,6 @@ const getProductAsHtmlString = (product) =>{
         <li><label>${product.size}</label></li>
         <li><label>${product.rating}</label></li>
         <li><label>${product.price}</label></li>
-        <li><label>${product.brand}</label></li>
       </ul>
       ${register}
 </article>
@@ -369,11 +380,8 @@ arr = loadProductsByOrder(arr, sortBy);  // sort the courses, reassign the new A
 window.addEventListener(`load`, () => {
   renderProductsFromArray(allProducts);
 
- // The course elements
- renderCoursesFromArray(allCourses);
-
  // UI elements
- document.getElementById('productView').addEventListener('click', toggleProductView);
+//  document.getElementById('productView').addEventListener('click', toggleProductView);
 //  document.getElementById('fallCourses').addEventListener('click', loadCoursesFromTerm);
  document.getElementById('products').addEventListener('click', handleClickOfProducts);
  document.getElementById('sortOrder').addEventListener('change', sortTheProducts);
