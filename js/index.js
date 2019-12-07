@@ -304,7 +304,7 @@ const sortTheProducts = event => {
 const getProductAsHtmlString = (product) =>{
   let callout = ``;
   let soldout = ``;
-  let register = `<button type="button" class="course-register" data-courseid="${product.id}">Register</button>`;
+  let register = `<button type="button" class="course-register" data-courseid="${product.id}">Add</button>`;
   if (product.available <= 0) {
     callout = `<small class="callout">Sold out</small>`;
     soldout = `soldout`;
@@ -314,7 +314,7 @@ const getProductAsHtmlString = (product) =>{
   }
   
   return `
-  <article class="course ${(product.brand) ? `cat-${product.brand}` : ''} ${soldout}">
+  <article class="product ${(product.brand) ? `cat-${product.brand}` : ''} ${soldout}">
   <header class="img-pro">
   <img src="${settings.imagePath + product.image}" alt="${product.name}">
   </header>
@@ -324,7 +324,7 @@ const getProductAsHtmlString = (product) =>{
         <li><label>${product.colour}</label></li>
         <li><label>${product.size}</label></li>
         <li><label>${product.rating}</label></li>
-        <li><label>${product.price}</label></li>
+        <li><label>$${product.price}</label></li>
       </ul>
       ${register}
 </article>
@@ -374,6 +374,64 @@ arr = loadProductsByOrder(arr, sortBy);  // sort the courses, reassign the new A
   
 }
 
+
+//PAGINATION
+
+// const list_element = document.getElementById('list');
+const pagination_element = document.getElementById('pagination');
+
+let current_page = 1;
+let rows = 5;
+
+function DisplayList (items, wrapper, rows_per_page, page) {
+	wrapper.innerHTML = "";
+	page--;
+
+	let start = rows_per_page * page;
+	let end = start + rows_per_page;
+	let paginatedItems = items.slice(start, end);
+
+	for (let i = 0; i < paginatedItems.length; i++) {
+		let item = paginatedItems[i];
+
+		let item_element = document.createElement('div');
+		item_element.classList.add('item');
+		item_element.innerText = item;
+		
+		wrapper.appendChild(item_element);
+	}
+}
+
+function SetupPagination (items, wrapper, rows_per_page) {
+	wrapper.innerHTML = "";
+
+	let page_count = Math.ceil(items.length / rows_per_page);
+	for (let i = 1; i < page_count + 1; i++) {
+		let btn = PaginationButton(i, items);
+		wrapper.appendChild(btn);
+	}
+}
+
+function PaginationButton (page, items) {
+	let button = document.createElement('button');
+	button.innerText = page;
+
+	if (current_page == page) button.classList.add('active');
+
+	button.addEventListener('click', function () {
+		current_page = page;
+		DisplayList(items, list_element, rows, current_page);
+
+		let current_btn = document.querySelector('.pagenumbers button.active');
+		current_btn.classList.remove('active');
+
+		button.classList.add('active');
+	});
+
+	return button;
+}
+
+
 // EXE
 
 //START
@@ -394,6 +452,9 @@ window.addEventListener(`load`, () => {
  document.getElementById('brandName').addEventListener('change', submitTheFilterForm);
  document.querySelectorAll('[name="rating"]').forEach(radbtn => radbtn.addEventListener('change', submitTheFilterForm));
 
+
+// DisplayList(allProducts, list_element, rows, current_page);
+SetupPagination(allProducts, pagination_element, rows);
 });
 
 //document.addEventListener("click",test);

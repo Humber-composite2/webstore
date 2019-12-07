@@ -1,4 +1,6 @@
-
+*{
+  list-style: none;
+}
 :root{
   --primary: #ddd;
   --dark: #333;
@@ -36,10 +38,8 @@ body{
 
 /* NAVIGATION */
 .header-nav ul{
-  display: grid;
   padding: 0;
-  list-style: none;
-  grid-template-columns: repeat(4, 1fr);
+
 }
 
 .header-nav a{
@@ -63,6 +63,7 @@ body{
   display: grid;
   padding: 0;
   grid-template-columns: repeat(4, 1fr);
+  background-color: violet;
 } */
 
 .main-section{
@@ -70,135 +71,44 @@ body{
   grid-template-columns: 1fr 1fr;
 }
 
-.filters-by{
+.filters-by ul{
   background-color: red;
-
+  padding: 0;
 }
 
-.rating ul{
-list-style: none;
-}
-
-.sort-by{
-  background-color: violet;
-}
 
 .products{
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  
+}
+
+
+.product{
   background-color:tomato;
   padding: 0.75rem;
   text-align: center;
   background-color: #ffffff;  
   box-shadow:  1em 1em 1em  rgba(0,0,0,0.4);
   border-radius: 0.5em;
-  list-style: none;
-  
+  margin: 1rem;
 }
 
-.products ul{
-  list-style: none;
-}
-
-.img-pro{
+.product-info{
   text-align: center;
+  background-color: blueviolet ;
+  padding: 0.5rem 0;
+  margin: 0;
 }
-
-.pro-footer{
-  text-align: center;
-}
-
-/* TOP CONTAINER */
-.top-container{
-  display: grid;
-  grid-template-areas: "shca shca toba"
-                       "shca shca tobb";
-}
-
-/* SHOWCASE */
-.showcase{
-  grid-area: shca;
-  min-height: 400px;
-  background: url(/img/christian-mack-t_ZeqvR9q2c-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column; 
-  align-items: start;
-  justify-content: center;
-  box-shadow: var(--shadow);
-}
-
-.showcase h1{
-  font-size: 4rem;
-  margin-bottom: 0;
-  color:var(--light);
-}
-
-.showcase p{
-  font-size: 1.3rem;
-  margin-top: 0;
-  color: var(--light);
-
-}
-
-/* TOP BOX */
-.top-box{
-  background: var(--primary);
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
-}
-
-.top-box .price{
-  font-size: 2.5rem ;
-}
-
-.top-box-a{
-  grid-area: toba;
-}
-
-.top-box-b{
-  grid-area: tobb;
-}
-
-/* BOXES */
-.boxes{
-  display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px,1fr)) ;
-}
-
-.box{
-  background: var(--primary);
-  text-align: center;
-  padding: 1.5rem 2rem;
-  box-shadow: var(--shadow);
-}
-
-/* INFO */
-.info{
-  background: var(--primary);
-  box-shadow: var(--shadow);
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  padding: 3rem;
-}
-
-/* PORTFOLIO */
-.portfolio{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-
-}
-
-.portfolio img{
+img{
   width: 100%;
-  box-shadow: var(--shadow);
 }
+
+
 
 /* FOOTER */
-.footer1{
+.footer{
   margin-top: 2rem;
   background: var(--dark);
   color: var(--light);
@@ -207,44 +117,35 @@ list-style: none;
 }
 
 /* MEDIA QUERIES */
-@media(max-width: 700px){
-  .top-container{
-    grid-template-areas: "shca shca"
-                          "toba tobb";
-  }
-  .showcase h1{
-    font-size: 2.5rem;
-  }
-  
+@media(min-width: 700px){
+
+
   .header-nav ul{
-    grid-template-columns: 1fr;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .filters-by{
+    
   }
   
-  .info{
-    grid-template-columns: 1fr;
+}
+
+@media(min-width: 800px){
+
+
+  .header-nav ul{
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .sort-by{
-    grid-template-columns: repeat(2,1fr);
+  .filters-by{
+    
   }
+  
 }
 
 
 
-.info .btn{
-  display: block;
-  text-align: center;
-  margin: auto;
-}
-
-@media (max-width: 500px){
-  .top-container{
-    grid-template-areas: "shca"
-                          "toba"
-                          "tobb";
-  }
-
-  .sort-by{
-    grid-template-columns: 1fr;
-  }
-}
