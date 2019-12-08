@@ -7,7 +7,7 @@
     <meta name="description" content="Sell Clothes">
     <meta name="author" content="Ivandi S">
     <!-- You may change this "Reset" to "Normalize" if preferred -->
-    <!-- <link rel="stylesheet" href="css/reset.css">  -->
+    <link rel="stylesheet" href="css/reset.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
     <!-- <script src="https://kit.fontawesome.com/91d2257466.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="css/index.css">
@@ -18,6 +18,11 @@
   <div class="wrapper">
     <!-- NAVIGATION -->
     <header>
+        <ul class="header-logo">
+          <li class="logo"><a href="#"><img src="img/Logo.png" alt=""></a></li>
+          <li class="signin"><a href="#"><img src="img/SignIn.png" alt=""></a></li>
+          <li class="cart"><a href="#"><img src="img/Cart.png" alt=""></a></li>
+        </ul>
       <nav class="header-nav">
         <ul>
           <li><a href="#">Home</a></li>
@@ -40,12 +45,14 @@
         <section class="filters-by">
           <h2>Filters</h2>
           <form class="filters" id="filtersForm">
-            <label for="productName">Search
+            <fieldset>
+            <legend for="productName"> &nbsp Search &nbsp</legend>
               <input type="search" name="find" id="productName">
-            </label>
+            
+          </fieldset>
             <!-- <button type="button"><span class="material-icons">search</span></button> -->
             <fieldset class="brandName">
-              <label for="brandName">Brand:
+              <legend for="brandName">&nbsp Brand &nbsp</legend>
                 <select name="brandName" id="brandName">
                   <option value="all" selected>All Brands</option>
                   <option value="adidas">Adidas</option>
@@ -54,10 +61,10 @@
                   <option value="nike">Nike</option>
                   <option value="puma">Puma</option>
                 </select>
-              </label>
+              
             </fieldset>
             <fieldset class="rating">
-              <legend>Ratings (at least)</legend>
+              <legend> &nbsp Ratings &nbsp</legend>
               <ul>
                 <li>
                   <input type="radio" name="rating" value="all" checked>

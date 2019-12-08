@@ -310,7 +310,7 @@ const getProductAsHtmlString = (product) =>{
     soldout = `soldout`;
     register = ``;
   } else if (product.available < settings.notifyQuantitiesRemaining) {
-    callout = `<small class="callout urgent">Limited seats remaining</small>`;
+    callout = `<small class="callout urgent">Limited ${product.available} remaining</small>`;
   }
   
   return `
