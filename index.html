@@ -19,12 +19,13 @@
     <!-- NAVIGATION -->
     <header>
         <ul class="header-logo">
+          
           <li class="logo"><a href="#"><img src="img/Logo.png" alt=""></a></li>
           <li class="signin"><a href="#"><img src="img/SignIn.png" alt=""></a></li>
           <li class="cart"><a href="#"><img src="img/Cart.png" alt=""></a></li>
         </ul>
       <nav class="header-nav">
-        <ul>
+        <ul class="menu-list">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
@@ -120,17 +121,17 @@
                 </li>
               </ul>
             </fieldset>
-            <!-- <fieldset class="sort-by-colour">
-                        <legend>Colour</legend>
-                        <ul>
-                          <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-                          <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-                          <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-                          <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-                          <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
-                        </ul>
-                      </fieldset>
-                      <fieldset class="sort-by-size">
+            <fieldset class="sort-by-colour">
+              <legend>Colour</legend>
+              <ul>
+                <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+                <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+                <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+                <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+                <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+              </ul>
+            </fieldset>
+                    <!--   <fieldset class="sort-by-size">
                         <legend>Sizes</legend>
                         <ol>
                           <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
@@ -142,7 +143,7 @@
                       </fieldset> -->
           </form>
         </section>
-        <section>
+        <section class="mid-section">
           <header class="sort-by">
             <h1>Sale on [Category Name]</h1>
             <fieldset class="sort-order">
@@ -158,12 +159,12 @@
               </label>
             </fieldset>
         
-            <h2>Courses <small id="numResults">(5 results)</small></h2>
+            <h2>Products <small id="numResults">(5 results)</small></h2>
           </header>
           <section id="products" class="products"></section>
-          
-        <div class="list" id="list"></div>
-        <div class="pagenumbers" id="pagination"></div>
+        
+          <!-- <div class="list" id="list"></div> -->
+          <div class="pagenumbers" id="pagination"></div>
         </section>
         
     </main>
