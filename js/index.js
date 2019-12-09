@@ -333,7 +333,7 @@ const getProductAsHtmlString = (product) =>{
     soldout = `soldout`;
     register = ``;
   } else if (product.available < settings.notifyQuantitiesRemaining) {
-    callout = `<small class="callout urgent">Limited ${product.available} remaining</small>`;
+    callout = `<small class="callout urgent">${product.available}</small>`;
   }
   
   return `
@@ -342,10 +342,10 @@ const getProductAsHtmlString = (product) =>{
   <img src="${settings.imagePath + product.image}" alt="${product.name}">
   </header>
  
-      <h3>${product.name} ${callout}</h3>
+      <h3>${product.name} </h3>
       <ul class="product-info">
-        <li><label>${product.colour}</label></li>
-        <li><label>${product.size}</label></li>
+        <li><label>${callout} remaining</label></li>
+        <li><label>Size:${product.size}</label></li>
         <li><label>${product.rating}</label></li>
         <li><label>$ ${product.price}</label></li>
 
