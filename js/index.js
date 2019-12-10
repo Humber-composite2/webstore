@@ -50,7 +50,7 @@ const allProducts =[
     colour: `blue`,
     size: `xl`,
     rating: `1star`,
-    available: 12,
+    available: 7,
     price: 49
   },{ //4
     id : 105,
@@ -100,7 +100,7 @@ const allProducts =[
     colour: `blue`,
     size: `xs`,
     rating: `3stars`,
-    available: 10,
+    available: 0,
     price: 149
   },{ //9
     id : 110,
@@ -333,7 +333,7 @@ const getProductAsHtmlString = (product) =>{
     soldout = `soldout`;
     register = ``;
   } else if (product.available < settings.notifyQuantitiesRemaining) {
-    callout = `<small class="callout urgent">${product.available}</small>`;
+    callout = `<small class="callout urgent">${product.available} remaining</small>`;
   }
   
   return `
@@ -342,9 +342,9 @@ const getProductAsHtmlString = (product) =>{
   <img src="${settings.imagePath + product.image}" alt="${product.name}">
   </header>
  
-      <h3>${product.name} </h3>
+      <h3>${product.name}</h3>
       <ul class="product-info">
-        <li><label>${callout} remaining</label></li>
+       <li><label>${callout}</label</li>
         <li><label>Size:${product.size}</label></li>
         <li><label>${product.rating}</label></li>
         <li><label>$ ${product.price}</label></li>
