@@ -4,7 +4,7 @@ let tes = document.getElementById(`test`);
 const settings = {
   notifyQuantitiesRemaining: 5,
   // productsPerPage: 3,
-  imagePath: "img/products/"
+  imagePath: 'img/products/'
 }
 
 const shoppingCart = [
@@ -278,8 +278,8 @@ const runTheFilter = theForm => {
   // Filter all courses in multiple
   const filteredProducts = allProducts
     .filter(c => c.name.toLowerCase().includes( nameToSearch.trim().toLowerCase() ))  // filter by name
-    .filter(c => c.brand == brandToSearch || brandToSearch == "all")         // filter by category
-    .filter(c => c.rating == ratingToSearch || ratingToSearch == "all");        // filter by semester
+    .filter(c => c.brand == brandToSearch || brandToSearch == "all")         // filter by brand
+    .filter(c => c.rating == ratingToSearch || ratingToSearch == "all");        // filter by rating
 
   renderProductsFromArray(filteredProducts);
 }
@@ -287,10 +287,7 @@ const runTheFilter = theForm => {
 
 
 // EVENT HANDLER FUNCTIONS **************
-// const loadRating = event => {
-//   const justFall2019 = allProducts.filter(c => c.rating == `Adidas`);
-//   renderCoursesFromArray(justFall2019);
-// }
+
 
 const handleClickOfProducts = event => {
   if (!event.target.matches('button.add-product')) {
@@ -320,10 +317,10 @@ const sortTheProducts = event => {
 
 // FUNCTIONS THAT BUILD OUR VIEW **************
 
-/*  Function: getCourseAsHtmlString
+/*  Function: getProductAsHtmlString
     Parameters: course:Object
     Return: String of HTML (<article>)
-    Description: Allows our courses to be built using a template (for map())  */
+    Description: Allows our products to be built using a template (for map())  */
 const getProductAsHtmlString = (product) =>{
   let callout = ``;
   let soldout = ``;
@@ -389,7 +386,7 @@ arr = loadProductsByOrder(arr, sortBy);  // sort the courses, reassign the new A
 
   // 3. BUILD OUTPUT
   if (arr.length > 0) {
-    document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n'); // Print courses  
+    document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n'); // Print products  
   } else {
     document.getElementById('products').innerHTML = 'Sorry, no matching results.' // Woops!
   }
