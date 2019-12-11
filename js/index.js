@@ -4,7 +4,7 @@ let tes = document.getElementById(`test`);
 const settings = {
   notifyQuantitiesRemaining: 5,
   // productsPerPage: 3,
-  imagePath: `img/products/`
+  imagePath: `./img/products/`
 }
 
 const shoppingCart = [
