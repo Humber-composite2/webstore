@@ -14,7 +14,7 @@ const shoppingCart = [
 const allProducts =[
   { //0
     id : 101,
-    image : `tshirt-119.png`,
+    image : `Tshirt-119.png`,
     name: `Champ Super 1`,
     brand: `champion`,
     colour: `red`,
@@ -25,7 +25,7 @@ const allProducts =[
     price: 39
   },{ //1
     id : 102,
-    image : `tshirt-120.png`,
+    image : `Tshirt-120.png`,
     name: `Nike Super 1`,
     brand: `nike`,
     colour: `red`,
@@ -36,7 +36,7 @@ const allProducts =[
     price: 59
   },{ //2
     id : 103,
-    image : `tshirt-010.png`,
+    image : `Tshirt-010.png`,
     name: `Adidas Super 1`,
     brand: `adidas`,
     colour: `yellow`,
@@ -47,7 +47,7 @@ const allProducts =[
     price: 69
   },{ //3
     id : 104,
-    image : `tshirt-121.png`,
+    image : `Tshirt-121.png`,
     name: `Fila Super 1`,
     brand: `fila`,
     colour: `blue`,
@@ -58,7 +58,7 @@ const allProducts =[
     price: 49
   },{ //4
     id : 105,
-    image : `tshirt-001.png`,
+    image : `Tshirt-001.png`,
     name: `Puma Super 1`,
     brand: `puma`,
     colour: `black`,
@@ -69,7 +69,7 @@ const allProducts =[
     price: 49
   },{ //5
     id : 106,
-    image : `tshirt-113.png`,
+    image : `Tshirt-113.png`,
     name: `Champ Super 2`,
     brand: `champion`,
     colour: `grey`,
@@ -80,7 +80,7 @@ const allProducts =[
     price: 139
   },{ //6
     id : 107,
-    image : `tshirt-117.png`,
+    image : `Tshirt-117.png`,
     name: `Nike Super 2`,
     brand: `nike`,
     colour: `red`,
@@ -91,7 +91,7 @@ const allProducts =[
     price: 259
   },{ //7
     id : 108,
-    image : `tshirt-003.png`,
+    image : `Tshirt-003.png`,
     name: `Adidas Super 2`,
     brand: `adidas`,
     colour: `black`,
@@ -102,7 +102,7 @@ const allProducts =[
     price: 279
   },{ //8
     id : 109,
-    image : `tshirt-122.png`,
+    image : `Tshirt-122.png`,
     name: `Fila Super 2`,
     brand: `fila`,
     colour: `blue`,
@@ -113,7 +113,7 @@ const allProducts =[
     price: 149
   },{ //9
     id : 110,
-    image : `tshirt-115.png`,
+    image : `Tshirt-115.png`,
     name: `Puma Super 2`,
     brand: `puma`,
     colour: `grey`,
@@ -124,7 +124,7 @@ const allProducts =[
     price: 199
   },{ //10
     id : 111,
-    image : `tshirt-123.png`,
+    image : `Tshirt-123.png`,
     name: `Champ Super 3`,
     brand: `champion`,
     colour: `blue`,
@@ -135,7 +135,7 @@ const allProducts =[
     price: 89
   },{ //11
     id : 112,
-    image : `tshirt-111.png`,
+    image : `Tshirt-111.png`,
     name: `Nike Super 3`,
     brand: `nike`,
     colour: `grey`,
@@ -146,7 +146,7 @@ const allProducts =[
     price: 129
   },{ //12
     id : 113,
-    image : `tshirt-006.png`,
+    image : `Tshirt-006.png`,
     name: `Adidas Super 3`,
     brand: `adidas`,
     colour: `yellow`,
@@ -157,7 +157,7 @@ const allProducts =[
     price: 89
   },{ //13
     id : 114,
-    image : `tshirt-002.png`,
+    image : `Tshirt-002.png`,
     name: `Fila Super 4`,
     brand: `fila`,
     colour: `black`,
@@ -168,7 +168,7 @@ const allProducts =[
     price: 69
   },{ //14
     id : 115,
-    image : `tshirt-007.png`,
+    image : `Tshirt-007.png`,
     name: `Puma Super 4`,
     brand: `puma`,
     colour: `yellow`,
@@ -179,7 +179,7 @@ const allProducts =[
     price: 69
   },{ //15
     id : 116,
-    image : `tshirt-008.png`,
+    image : `Tshirt-008.png`,
     name: `Champ Super 5`,
     brand: `champion`,
     colour: `yellow`,
@@ -190,7 +190,7 @@ const allProducts =[
     price: 19
   },{ //16
     id : 117,
-    image : `tshirt-118.png`,
+    image : `Tshirt-118.png`,
     name: `Nike Super 5`,
     brand: `nike`,
     colour: `red`,
@@ -201,7 +201,7 @@ const allProducts =[
     price: 39
   },{ //17
     id : 118,
-    image : `tshirt-009.png`,
+    image : `Tshirt-009.png`,
     name: `Adidas Super 5`,
     brand: `adidas`,
     colour: `yellow`,
@@ -212,7 +212,7 @@ const allProducts =[
     price: 23
   },{ //18
     id : 119,
-    image : `tshirt-124.png`,
+    image : `Tshirt-124.png`,
     name: `Fila Super 5`,
     brand: `fila`,
     colour: `blue`,
@@ -223,7 +223,7 @@ const allProducts =[
     price: 19
   },{ //19
     id : 120,
-    image : `tshirt-112.png`,
+    image : `Tshirt-112.png`,
     name: `Puma Super 5`,
     brand: `puma`,
     colour: `grey`,
