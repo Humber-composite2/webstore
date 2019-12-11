@@ -14,7 +14,7 @@ const shoppingCart = [
 const allProducts =[
   { //0
     id : 101,
-    image : `tshirt-119.png`,
+    image : `Tshirt-119.png`,
     name: `Champ Super 1`,
     brand: `champion`,
     colour: `red`,
@@ -24,7 +24,7 @@ const allProducts =[
     price: 39
   },{ //1
     id : 102,
-    image : `tshirt-120.png`,
+    image : `Tshirt-120.png`,
     name: `Nike Super 1`,
     brand: `nike`,
     colour: `red`,
