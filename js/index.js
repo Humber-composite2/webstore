@@ -3,8 +3,8 @@ let tes = document.getElementById(`test`);
 
 const settings = {
   notifyQuantitiesRemaining: 5,
-  productsPerPage: 3,
-  imagePath: 'img/products/'
+  // productsPerPage: 3,
+  imagePath: `img/products/`
 }
 
 const shoppingCart = [

@@ -243,6 +243,9 @@ color: var(--light);
 
 /* MEDIA QUERIES */
 @media(min-width: 600px){
+  .logo img{
+    width: 20%;
+  }
 
   .header-nav ul{
     display: grid;
@@ -252,11 +255,10 @@ color: var(--light);
   .products{
     grid-template-columns: repeat(2, 1fr);
   }  
+
   .cs{
- 
     width: 40%;
     height: 40%;
-    
     
     }
 
@@ -268,8 +270,6 @@ color: var(--light);
    margin: 1rem;
    }
  
-
-
   .social-media{
     display: flex;
     width: 40%;
@@ -284,15 +284,16 @@ text-align: right;
 }
 
 @media(min-width: 800px){
-  
+  .logo img{
+    width: 20%;
+  }
   .products{
     grid-template-columns: repeat(4, 1fr);
   }
-  .cs{
-    
+
+  .cs{  
     width: 60%;
     height: 60%;
-    
     
     }
   .mobile-apps{
