@@ -14,22 +14,24 @@ const shoppingCart = [
 const allProducts =[
   { //0
     id : 101,
-    image : `Tshirt-119.png`,
+    image : `tshirt-119.png`,
     name: `Champ Super 1`,
     brand: `champion`,
     colour: `red`,
     size: `m`,
     rating: `2stars`,
+    ratingImg: `2stars.png`,
     available: 10,
     price: 39
   },{ //1
     id : 102,
-    image : `Tshirt-120.png`,
+    image : `tshirt-120.png`,
     name: `Nike Super 1`,
     brand: `nike`,
     colour: `red`,
     size: `s`,
     rating: `3stars`,
+    ratingImg: `3stars.png`,
     available: 5,
     price: 59
   },{ //2
@@ -40,6 +42,7 @@ const allProducts =[
     colour: `yellow`,
     size: `l`,
     rating: `4stars`,
+    ratingImg: `4stars.png`,
     available: 7,
     price: 69
   },{ //3
@@ -50,6 +53,7 @@ const allProducts =[
     colour: `blue`,
     size: `xl`,
     rating: `1star`,
+    ratingImg: `1star.png`,
     available: 7,
     price: 49
   },{ //4
@@ -60,6 +64,7 @@ const allProducts =[
     colour: `black`,
     size: `xl`,
     rating: `5stars`,
+    ratingImg: `5stars.png`,
     available: 11,
     price: 49
   },{ //5
@@ -70,6 +75,7 @@ const allProducts =[
     colour: `grey`,
     size: `m`,
     rating: `2stars`,
+    ratingImg: `2stars.png`,
     available: 2,
     price: 139
   },{ //6
@@ -80,6 +86,7 @@ const allProducts =[
     colour: `red`,
     size: `s`,
     rating: `4stars`,
+    ratingImg: `4stars.png`,
     available: 8,
     price: 259
   },{ //7
@@ -90,6 +97,7 @@ const allProducts =[
     colour: `black`,
     size: `l`,
     rating: `5stars`,
+    ratingImg: `5stars.png`,
     available: 2,
     price: 279
   },{ //8
@@ -100,6 +108,7 @@ const allProducts =[
     colour: `blue`,
     size: `xs`,
     rating: `3stars`,
+    ratingImg: `3stars.png`,
     available: 0,
     price: 149
   },{ //9
@@ -110,6 +119,7 @@ const allProducts =[
     colour: `grey`,
     size: `xl`,
     rating: `5stars`,
+    ratingImg: `5stars.png`,
     available: 1,
     price: 199
   },{ //10
@@ -120,6 +130,7 @@ const allProducts =[
     colour: `blue`,
     size: `m`,
     rating: `2stars`,
+    ratingImg: `2stars.png`,
     available: 10,
     price: 89
   },{ //11
@@ -130,6 +141,7 @@ const allProducts =[
     colour: `grey`,
     size: `m`,
     rating: `3stars`,
+    ratingImg: `3stars.png`,
     available: 10,
     price: 129
   },{ //12
@@ -140,6 +152,7 @@ const allProducts =[
     colour: `yellow`,
     size: `xs`,
     rating: `1star`,
+    ratingImg: `1star.png`,
     available: 10,
     price: 89
   },{ //13
@@ -150,6 +163,7 @@ const allProducts =[
     colour: `black`,
     size: `m`,
     rating: `3stars`,
+    ratingImg: `3stars.png`,
     available: 10,
     price: 69
   },{ //14
@@ -160,6 +174,7 @@ const allProducts =[
     colour: `yellow`,
     size: `l`,
     rating: `2stars`,
+    ratingImg: `2stars.png`,
     available: 7,
     price: 69
   },{ //15
@@ -170,6 +185,7 @@ const allProducts =[
     colour: `yellow`,
     size: `l`,
     rating: `nostar`,
+    ratingImg: `0star.png`,
     available: 10,
     price: 19
   },{ //16
@@ -180,6 +196,7 @@ const allProducts =[
     colour: `red`,
     size: `L`,
     rating: `1star`,
+    ratingImg: `1star.png`,
     available: 10,
     price: 39
   },{ //17
@@ -190,6 +207,7 @@ const allProducts =[
     colour: `yellow`,
     size: `l`,
     rating: `nostar`,
+    ratingImg: `0star.png`,
     available: 10,
     price: 23
   },{ //18
@@ -200,6 +218,7 @@ const allProducts =[
     colour: `blue`,
     size: `xl`,
     rating: `2stars`,
+    ratingImg: `2stars.png`,
     available: 10,
     price: 19
   },{ //19
@@ -210,6 +229,7 @@ const allProducts =[
     colour: `grey`,
     size: `s`,
     rating: `4stars`,
+    ratingImg: `4stars.png`,
     available: 3,
     price: 49
   }
@@ -335,17 +355,17 @@ const getProductAsHtmlString = (product) =>{
   
   return `
   <article class="product ${(product.brand) ? `cat-${product.brand}` : ''} ${soldout}">
-  <header class="img-pro">
-  <img src="${settings.imagePath + product.image}" alt="${product.name}">
+  
+  <img src="${settings.imagePath + product.image}" alt="${product.name}" class="product-img">
   </header>
  
-      <h3>${product.name}</h3>
+      
       <ul class="product-info">
+      <li><h3>${product.name}</h3></li>
        <li><label>${callout}</label</li>
-        <li><label>Size:${product.size}</label></li>
-        <li><label>${product.rating}</label></li>
+        <li><label>Size:${product.size.toUpperCase()}</label></li>
         <li><label>$ ${product.price}</label></li>
-
+        <li><img src="${settings.imagePath + product.ratingImg}" class="rating-img"></li>
       </ul>
       ${register}
 </article>
