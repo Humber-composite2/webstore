@@ -42,6 +42,8 @@ h3{
 }
 
 
+
+
 fieldset {
   display: block;
   margin-inline-start: 2px;
@@ -140,9 +142,15 @@ text-align: center;
  
 }
 
-.rating{
 
-}
+
+/* .star{
+background-color: #fff;
+display: inline;
+width: 38%;
+
+
+} */
 
 /* MAIN RIGHT */
 .mid-section{
@@ -177,8 +185,8 @@ text-align: center;
   background-color:var(--light) ;
   border: solid 1px;
   border-radius: 0.5rem;
-  padding: 0.5rem 0;
-  margin: 0;
+  padding: 0.5rem;
+  margin: 0 ;
 }
 
 .add-product{
@@ -210,11 +218,12 @@ text-align: center;
   color: #999;
 }
 
-.rating-img{
+.rating img{
   width: 50%;
   height: 50%;
-  padding: 0;
-  margin: 0;
+padding: 0.25rem;
+
+  
 }
 
 .pagenumbers{

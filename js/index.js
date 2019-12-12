@@ -8,7 +8,7 @@ const settings = {
 }
 
 const shoppingCart = [
-  {productid: 101, qty: 1}
+  // {productid: 101, qty: 1}
 ];
 
 const allProducts =[
@@ -244,25 +244,15 @@ const addItemToCart = productid => {
   // [ {courseid: 101, qty: 1} ]
 
   const cartItem = shoppingCart.find(item => item.productid == productid);
-
   if (cartItem) {  // if a cartItem was found
     cartItem.qty++;
     console.log(cartItem);
   } else {
     shoppingCart.push({productid: productid, qty: 1});
-    document.getElementById(`cartQty`).innerText = cartItem.length;
+    console.log(cartItem)
   }
-  
-  // if (this id already exist in the Array) {
-  //   Update the quantity of the item
-  // } else if (it does not exist) {
-  //   Add a new item to the shoppingCart
-  // }
 
-  // Is it important to return a value here? 
-  //    Why would we? Why not?
-  // What else might we need/want this function to do? 
-  //    If anything, weigh the pros/cons of doing it here vs elsewhere
+  document.getElementById(`cartQty`).innerText = shoppingCart.length;
 }
 
 // Sorting order function
@@ -338,10 +328,6 @@ const sortTheProducts = event => {
 
 // FUNCTIONS THAT BUILD OUR VIEW **************
 
-/*  Function: getProductAsHtmlString
-    Parameters: course:Object
-    Return: String of HTML (<article>)
-    Description: Allows our products to be built using a template (for map())  */
 const getProductAsHtmlString = (product) =>{
   let callout = ``;
   let soldout = ``;
@@ -386,24 +372,6 @@ const renderProductsFromArray = (arr) => {
 // 1. SORT!!!
 const sortBy = document.getElementById('sortOrder').value;    // dropdown value
 arr = loadProductsByOrder(arr, sortBy);  // sort the courses, reassign the new Array
-  // 2. PAGINATE
-    // How many pages do we need? 
-    //  totalNumCourses / coursesPerPage
-    //    Round this^ up to the next integer
-    
-    // TEST EXAMPLE:  10 courses / 3 coursesPerPage = 4 pages required
-    //    Page 1:   0, 1, 2
-    //    Page 2:   3, 4, 5
-    //    Page 3:   6, 7, 8
-    //    Page 4:   9
-
-    // Therefor...
-    // Index of the first course on each page: 
-    //    firstIndexOnThisPage = (pageNum - 1) * coursesPerPage
-    // Index of the last course on each page:
-    //    lastIndexOnThisPage = firstIndexOnThisPage + coursesPerPage
-    //      (Remember that slice() excludes the last index.)
-
 
   // 3. BUILD OUTPUT
   if (arr.length > 0) {
@@ -508,45 +476,45 @@ SetupPagination(allProducts, pagination_element, rows);
 
 /* Banner runs on startup */
 
-$(document).ready(function() {  
+// $(document).ready(function() {  
 
-  var id = '#dialog';
+//   var id = '#dialog';
 
-  //Get the screen height and width
-  var maskHeight = $(document).height();
-  var maskWidth = $(window).width();
+//   //Get the screen height and width
+//   var maskHeight = $(document).height();
+//   var maskWidth = $(window).width();
 
-  //Set heigth and width to mask to fill up the whole screen
-  $('#mask').css({'width':maskWidth,'height':maskHeight});
+//   //Set heigth and width to mask to fill up the whole screen
+//   $('#mask').css({'width':maskWidth,'height':maskHeight});
   
-  //transition effect   
-  $('#mask').fadeIn(500); 
-  $('#mask').fadeTo("slow",0.9);  
+//   //transition effect   
+//   $('#mask').fadeIn(500); 
+//   $('#mask').fadeTo("slow",0.9);  
 
-  //Get the window height and width
-  var winH = $(window).height();
-  var winW = $(window).width();
+//   //Get the window height and width
+//   var winH = $(window).height();
+//   var winW = $(window).width();
             
-  //Set the popup window to center
-  $(id).css('top',  winH/2-$(id).height()/2);
-  $(id).css('left', winW/2-$(id).width()/2);
+//   //Set the popup window to center
+//   $(id).css('top',  winH/2-$(id).height()/2);
+//   $(id).css('left', winW/2-$(id).width()/2);
 
-  //transition effect
-  $(id).fadeIn(2000);   
+//   //transition effect
+//   $(id).fadeIn(2000);   
 
-//if close button is clicked
-$('.window .close').click(function (e) {
-  //Cancel the link behavior
-  e.preventDefault();
+// //if close button is clicked
+// $('.window .close').click(function (e) {
+//   //Cancel the link behavior
+//   e.preventDefault();
   
-  $('#mask').hide();
-  $('.window').hide();
-});   
+//   $('#mask').hide();
+//   $('.window').hide();
+// });   
 
-//if mask is clicked
-$('#mask').click(function () {
-  $(this).hide();
-  $('.window').hide();
-});   
+// //if mask is clicked
+// $('#mask').click(function () {
+//   $(this).hide();
+//   $('.window').hide();
+// });   
 
-});
+// });
