@@ -287,7 +287,7 @@ const runTheFilter = theForm => {
 
   console.log(theForm.elements)
 
-  // Filter all courses in multiple
+  // Filter all products in multiple
   const filteredProducts = allProducts
     .filter(c => c.name.toLowerCase().includes( nameToSearch.trim().toLowerCase() ))  // filter by name
     .filter(c => c.brand == brandToSearch || brandToSearch == "all")         // filter by brand
@@ -372,7 +372,7 @@ const renderProductsFromArray = (arr) => {
 
 // 1. SORT!!!
 const sortBy = document.getElementById('sortOrder').value;    // dropdown value
-arr = loadProductsByOrder(arr, sortBy);  // sort the courses, reassign the new Array
+arr = loadProductsByOrder(arr, sortBy);  // sort the products, reassign the new Array
 
   // 3. BUILD OUTPUT
   if (arr.length > 0) {
