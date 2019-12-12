@@ -236,17 +236,18 @@ const allProducts =[
 ];
 
 // FUNCTIONS
-function test(){
-  alert(`test`);
-}
+// function test(){
+//   alert(`test`);
+// }
 
 const addItemToCart = productid => {
-  // [ {courseid: 101, qty: 1} ]
+  
 
   const cartItem = shoppingCart.find(item => item.productid == productid);
   if (cartItem) {  // if a cartItem was found
     cartItem.qty++;
     console.log(cartItem);
+    
   } else {
     shoppingCart.push({productid: productid, qty: 1});
     console.log(cartItem)
@@ -352,7 +353,7 @@ const getProductAsHtmlString = (product) =>{
        <li><label>${callout}</label</li>
         <li><label>Size:${product.size.toUpperCase()}</label></li>
         <li><label>$ ${product.price}</label></li>
-        <li><img src="${settings.imagePath + product.ratingImg}" class="rating-img"></li>
+        <li><img src="${settings.imagePath + product.ratingImg}" class="product-rating-img"></li>
       </ul>
       ${register}
 </article>
@@ -452,8 +453,7 @@ window.addEventListener(`load`, () => {
   renderProductsFromArray(allProducts);
 
  // UI elements
-//  document.getElementById('productView').addEventListener('click', toggleProductView);
-//  document.getElementById('fallCourses').addEventListener('click', loadCoursesFromTerm);
+
  document.getElementById('products').addEventListener('click', handleClickOfProducts);
  document.getElementById('sortOrder').addEventListener('change', sortTheProducts);
 
@@ -472,7 +472,7 @@ window.addEventListener(`load`, () => {
 SetupPagination(allProducts, pagination_element, rows);
 });
 
-//document.addEventListener("click",test);
+
 
 /* Banner runs on startup */
 
@@ -518,3 +518,5 @@ $('#mask').click(function () {
 });   
 
 });
+
+//document.addEventListener("click",test);
